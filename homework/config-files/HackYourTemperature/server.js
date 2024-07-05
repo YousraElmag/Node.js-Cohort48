@@ -8,7 +8,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/weather',(req,res)=>{
-  const {cityname}=req.body
+  const {cityName}=req.body
   res.send(`${cityname}`)
 })
 app.listen(port,()=>{
