@@ -9,7 +9,7 @@ app.get('/',(req,res)=>{
 
 app.post('/weather',(req,res)=>{
   const {cityName}=req.body
-  res.send(`${cityname}`)
+  res.send(`${cityName}`)
 })
 app.listen(port,()=>{
   console.log('listen on port:',port);
