@@ -9,5 +9,11 @@ describe('Testing API endpoints', () => {
     const response = await request.get('/');
     expect(response.status).toBe(200);
   });
+  it('should return error if city name empty ',async()=>{
+    const response=await request.get('/weather').send();
+    expect(response.status).toBe(400);
+    expect(response.body).toEqual({ error: "City name is required" });
+  })
+  
 });
 
